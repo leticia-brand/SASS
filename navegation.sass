@@ -1,0 +1,110 @@
+@use "variables"
+@use "colors"
+
+
+.cabecalho
+    width: variables.$full_width
+  
+  
+  .tiles
+    background-color: colors.$laranja_1
+    height: variables.$100_space * 2
+    width: variables.$full_width
+    
+
+
+.center
+    position: relative
+
+
+    img:nth-child(1)
+        position: absolute
+        width: 12%
+        top: variables.$10_space * 2
+        left: variables.$quarter_width
+        background: none
+        
+    img:nth-child(2)
+        position: absolute
+        width: 40%
+        top: variables.$100_space
+        left: variables.$quarter_width *2.4
+        transform: translate(-variables.half_width, -variables.half_width)
+        background: none
+
+
+    .restrito
+        position: absolute
+        top: variables.$10_space
+        right: variables.$10_space * 5
+        transform: translate(-variables.half_width, -variables.half_width)
+        background: none
+        transition: .5s
+
+
+        img
+            transition: .5s
+
+
+            :hover
+                transform: scale(1.5)
+                    origin: center center
+
+ .navbar
+    background-color: red
+    text-decoration: none
+    
+    *
+        background-color: red
+        
+        
+.navbar-nav
+    position: relative   
+    
+
+.nav-link
+    color: white
+    font-weight: bold
+    transition: .5s
+
+
+    :hover
+        color: colors.$cinza_1
+        background-color: colors.$vermelho_1
+        font-weight: bold
+
+  
+    
+    
+.navbar-brand
+    color: white
+    font-weight: bold
+    transition: .5s
+    
+.cadastro
+    border: 2px solid white
+        radius: variables.$10_space * 3
+    color: white
+    padding: variables.$10_space
+    background: none
+    font-weight: bold
+    transition: .5s ease
+    right: variables.$10_space * 2
+
+
+    :hover
+        background-color: colors.$vermelho_2
+    a
+        color: white
+        background: none
+
+        :hover
+            text-decoration: none
+            color: white
+
+
+
+
+    :hover
+        color: colors.$cinza_1
+        font-weight: bold
