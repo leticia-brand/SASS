@@ -1,6 +1,15 @@
 @use "variables"
 @use "colors"
 
+@mixin padrao ($bold: normal)
+    color: white
+    font-weight: $bold
+    transition: .5s
+        
+%back
+    background: none
+    position: absolute
+
 
 .cabecalho
     width: variables.$full_width
@@ -18,27 +27,24 @@
 
 
     img:nth-child(1)
-        position: absolute
         width: 12%
         top: variables.$10_space * 2
         left: variables.$quarter_width
-        background: none
+        @extend %back
         
     img:nth-child(2)
-        position: absolute
+         @extend %back
         width: 40%
         top: variables.$100_space
         left: variables.$quarter_width *2.4
         transform: translate(-variables.half_width, -variables.half_width)
-        background: none
 
 
     .restrito
-        position: absolute
+        @extend %back
         top: variables.$10_space
         right: variables.$10_space * 5
         transform: translate(-variables.half_width, -variables.half_width)
-        background: none
         transition: .5s
 
 
@@ -63,9 +69,7 @@
     
 
 .nav-link
-    color: white
-    font-weight: bold
-    transition: .5s
+    @include padrao ($bold: bold)
 
 
     :hover
@@ -77,9 +81,7 @@
     
     
 .navbar-brand
-    color: white
-    font-weight: bold
-    transition: .5s
+    @include padrao ($bold: bold)
     
 .cadastro
     border: 2px solid white
