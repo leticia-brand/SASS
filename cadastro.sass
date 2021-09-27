@@ -1,9 +1,18 @@
 @use "variables"
 @use "colors"
 
+%center-text
+    text-align: center
+
+@mixin flex ($bold: bold)
+    display: flex
+    flex-direction: column
+    font-weight: $bold
+    
+
 .bodycadastro 
     font-size: 1rem
-    text-align: center
+    @extend %center-text
     background:
         color: colors.$back_2
         attachment: fixed
@@ -15,16 +24,15 @@
         margin:
             top: 2rem
             bottom: .5rem
-        text-align: center
+        @extend %center-text
 
 
     form 
-        display: flex
-        flex-direction: column
+        @include flex ($bold: normal)
         align-items: center
         background: colors.$laranja_1
         width: 30%
-        text-align: center
+        @extend %center-text
         border-radius: 35px
         margin: 0 auto
             top: 15px
@@ -32,9 +40,7 @@
 
 
         label 
-            font-weight: bold
-            display: flex
-            flex-direction: column
+            @include flex
             margin-left: 0
             background: colors.$laranja_1
 
