@@ -12,15 +12,15 @@
 
 *   
     box-sizing: border-box
-    background-color: $first_color
+    background-color: colors.$back_1
 
 
 body
-    background-color: $second_color
+    background-color: colors.$back_2
 
 
 .conteudo
-    padding: 50px
+    padding: variables.$10_space *5
 
 
 .hot_dog
@@ -34,7 +34,7 @@ body
 .info
     z-index: 10
     padding:
-        top: 100px
+        top: variables.$100_space
         bottom: 0px
     display: table
 
@@ -43,9 +43,9 @@ body
 
     .text
         float: right
-        width: $quarter_width *2.4
+        width: variables.$quarter_width *2.4
         font-size: 32px
-        padding-right: 80px
+        padding-right: variables.$10_space * 8
 
 
 .frase
@@ -57,15 +57,15 @@ body
 
 
     .text
-        margin-top: 100px
+        margin-top: variables.$100_space
         float: right
-        width: $quarter_width *2
+        width: variables.$half_width
         font-size: 36px
 
 
     h2
         font-size: 32px
-        opacity: $quarter_width *2
+        opacity: variables.$half_width
 
         
 .pessoas 
